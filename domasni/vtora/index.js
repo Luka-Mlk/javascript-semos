@@ -68,10 +68,22 @@ flag === 1 ? console.log("Ima identicni") : console.log("Nema identicni");
 
 console.warn("Cetvrta zadaca");
 // 4.
+const nizaBukvi = ["z", "d", "r", "a", "v", "o"];
+console.log(nizaBukvi);
+console.log(nizaBukvi.join(""));
 
 console.warn("Petta zadaca");
 // 5.
-
 const array = [1, 2, 3, [4, 5], 6];
+for (let i = 0; i < array.length; i++) {
+  if (array[i].length) {
+    console.log("Ima podniza");
+    for (let j = 0; j <= array[i].length; j++) {
+      let somenum = array[i].shift();
+      array.push(somenum);
+      console.log(`Na kraj se dodade ${somenum}`);
+    }
+    array.pop(); //obid da ja izbrisam praznata niza ama nekako ne ide
+  }
+}
 console.log(array);
-console.log(array[3]);
