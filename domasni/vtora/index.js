@@ -83,7 +83,8 @@ for (let i = 0; i < array.length; i++) {
       array.push(somenum);
       console.log(`Na kraj se dodade ${somenum}`);
     }
-    array.pop(); //obid da ja izbrisam praznata niza ama nekako ne ide
+    //array[i].pop();
+    //obid da ja izbrisam praznata niza ama nekako ne ide
   }
 }
 console.log(array);
