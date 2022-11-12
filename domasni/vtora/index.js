@@ -36,17 +36,23 @@ const randoNiza = [];
 for (let i = 0; i < 5; i++) {
   randoNiza[i] = Math.trunc(Math.random() * 20 + 1);
 }
-let min = 21;
-let max = 0;
-for (let i = 0; i < randoNiza.length; i++) {
-  if (min > randoNiza[i]) {
-    min = randoNiza[i];
-  } else if (max < randoNiza[i]) {
-    max = randoNiza[i];
+if (randoNiza) {
+  if (randoNiza.length > 1) {
+    let min = 21;
+    let max = 0;
+    for (let i = 0; i < randoNiza.length; i++) {
+      if (min > randoNiza[i]) {
+        min = randoNiza[i];
+      } else if (max < randoNiza[i]) {
+        max = randoNiza[i];
+      }
+    }
+    console.log(randoNiza);
+    console.log(`Najmal e ${min}, a najgolem e ${max}`);
+  } else {
+    console.log("Nedozvolena niza");
   }
 }
-console.log(randoNiza);
-console.log(`Najmal e ${min}, a najgolem e ${max}`);
 
 console.warn("Treta zadaca");
 // 3.
@@ -56,11 +62,16 @@ for (let i = 0; i < 10; i++) {
 }
 console.log(randoNiza2);
 let flag = 0;
+let duplikatCounter = 0;
 for (let i = 0; i < randoNiza2.length; i++) {
-  let proveruvanBroj = randoNiza2[i];
+  // let proveruvanBroj = randoNiza2[i];
   for (let j = i + 1; j < randoNiza2.length - 1; j++) {
-    if (proveruvanBroj === randoNiza2[j]) {
+    if (randoNiza2[i] === randoNiza2[j]) {
       flag = 1;
+      duplikatCounter++;
+      console.log(
+        `Duplikat e ${randoNiza2[j]} i se povtoruva ${duplikatCounter}`
+      );
     }
   }
 }
