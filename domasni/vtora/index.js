@@ -69,13 +69,13 @@ for (let i = 0; i < randoNiza2.length; i++) {
     if (randoNiza2[i] === randoNiza2[j]) {
       flag = 1;
       duplikatCounter++;
-      console.log(
-        `Duplikat e ${randoNiza2[j]} i se povtoruva ${duplikatCounter}`
-      );
+      console.log(`Duplikat e ${randoNiza2[j]}`);
     }
   }
 }
-flag === 1 ? console.log("Ima identicni") : console.log("Nema identicni");
+flag === 1
+  ? console.log(`Ima identicna i taa se povtoruva ${duplikatCounter}`)
+  : console.log("Nema identicni");
 
 console.warn("Cetvrta zadaca");
 // 4.
