@@ -21,7 +21,7 @@ function nameChecker(name) {
     }
   }
   for (let i = 0; i < name.length; i++) {
-    if ((name.length >= 8 && golemaBukv === 0) || containsNumber(name)) {
+    if (name.length >= 8 && golemaBukv === 0 && containsNumber(name)) {
       // console.log("Imeto e dozvoleno");
       return 1;
     } else {
@@ -59,10 +59,10 @@ function person(name, pass) {
   const passArr = pass.split("");
   const checkedName = nameChecker(nameArr);
   const checkedPass = passChecker(passArr);
-  if (passChecker(pass) && nameChecker(name)) {
+  if (passChecker(pass) === 1 && nameChecker(name) === 1) {
     console.log("Login sucessful");
   } else {
     console.log("Login Failed");
   }
 }
-console.log(person("luka1234", "Pass123!"));
+console.log(person("lukaaaaa1", "Pass123!"));
