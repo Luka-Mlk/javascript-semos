@@ -16,17 +16,19 @@ function containsSpecialChars(str) {
 function nameChecker(name) {
   let golemaBukv = 0;
   for (let i = 0; i < name.length; i++) {
-    if (name[i] === name[i].toUpperCase()) {
-      golemaBukv = 1;
+    if (name[i] != containsNumber(name)) {
+      if (name[i] === name[i].toUpperCase()) {
+        golemaBukv = 1;
+      }
     }
-  }
-  for (let i = 0; i < name.length; i++) {
-    if (name.length >= 8 && golemaBukv === 0 && containsNumber(name)) {
-      // console.log("Imeto e dozvoleno");
-      return 1;
-    } else {
-      // console.log("Imeto ne e dozvoleno");
-      return 0;
+    for (let i = 0; i < name.length; i++) {
+      if ((name.length >= 8 && golemaBukv === 1) || containsNumber(name)) {
+        // console.log("Imeto e dozvoleno");
+        return 1;
+      } else {
+        // console.log("Imeto ne e dozvoleno");
+        return 0;
+      }
     }
   }
 }
@@ -59,10 +61,10 @@ function person(name, pass) {
   const passArr = pass.split("");
   const checkedName = nameChecker(nameArr);
   const checkedPass = passChecker(passArr);
-  if (passChecker(pass) === 1 && nameChecker(name) === 1) {
+  if (checkedName && checkedPass) {
     console.log("Login sucessful");
   } else {
     console.log("Login Failed");
   }
 }
-console.log(person("lukaaaaa1", "Pass123!"));
+console.log(person("Vladimir", "Pass123!"));
