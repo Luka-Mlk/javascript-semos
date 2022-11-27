@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", sans-serif;
+}
+:root {
+  --champagne-pink: #f2dfd7ff;
+  --ghost-white: #fef9ffff;
+  --irresistible: #aa4465ff;
+  --thistle: #d4c1ecff;
+  --maximum-blue-purple: #9f9fedff;
+}
+body {
+  background-color: var(--ghost-white);
+}
+.profiles-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.profile-clickable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem;
+  background-color: var(--champagne-pink);
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 0 50px hsla(0, 0%, 0%, 0.425);
+}
+.profile-clickable:hover img {
+  filter: blur(1px);
+}
+.profile-clickable:hover h2 {
+  filter: blur(1px);
+}
+.popup {
+  text-decoration: none;
+  position: absolute;
+  top: 40%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background-color: var(--ghost-white);
+  border-radius: 20px;
+  border: 2px solid var(--irresistible);
+  display: none;
+}
+.popup:hover {
+  box-shadow: 0 2px 20px var(--irresistible);
+}
+.profile-clickable:hover a {
+  display: block;
+}
+.profile-clickable img {
+  width: 150px;
+  margin-top: 20px;
+  clip-path: circle(50% at 50% 50%);
+}
+.profile-clickable h2 {
+  margin: 20px;
+  color: var(--irresistible);
+}
