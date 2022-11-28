@@ -39,9 +39,9 @@ body {
 .popup {
   text-decoration: none;
   position: absolute;
-  top: 40%;
+  top: 50%;
   right: 50%;
-  transform: translate(50%, 50%);
+  transform: translate(50%, -50%);
   z-index: 100;
   padding: 0.5rem 1rem;
   background-color: var(--ghost-white);
@@ -52,7 +52,7 @@ body {
 .popup:hover {
   box-shadow: 0 2px 20px var(--irresistible);
 }
-.profile-clickable:hover a {
+.profile-clickable:hover button {
   display: block;
 }
 .profile-clickable img {
@@ -63,4 +63,22 @@ body {
 .profile-clickable h2 {
   margin: 20px;
   color: var(--irresistible);
+}
+#userPopup {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background-color: var(--maximum-blue-purple);
+  height: 650px;
+  width: 500px;
+  z-index: 100;
+  text-align: center;
+  padding: 2rem;
+}
+h4 {
+  margin: 10px 0px;
+}
+.hidden {
+  display: none;
 }
