@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="addBook(event)">
+      <label for="author">Author</label>
+      <br />
+      <input id="author" type="text" />
+      <br />
+      <label for="name">Name</label>
+      <br />
+      <input id="name" type="text" />
+      <br />
+      <label for="year">Year</label>
+      <br />
+      <input id="year" type="text" />
+      <br />
+      <input type="submit" value="Add Book" />
+    </form>
+    <button style="margin: 20px 20px 20px 0">Save</button>
+    <button onclick="localRemoveLast()">Remove last</button>
+    <br />
+    <button onclick="localWipe()">Remove all</button>
+    <!-- <script src="index.js"></script>
+    <script src="storage.js"></script> -->
+    <script src="vezbi.js"></script>
+  </body>
+</html>
